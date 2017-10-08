@@ -1,0 +1,81 @@
+{
+    "users": [
+      {
+        "_id": "59d986cd26a9b09e2ea3ebcf",
+        "index": 0,
+        "status": "inactive",
+        "age": 30,
+        "name": "Mccarty Nicholson",
+        "gender": "male",
+        "group": "family",
+        "email": "mccartynicholson@krog.com",
+        "phone": "+1 (814) 403-3273"
+      },
+      {
+        "_id": "59d986cd7c7827d316572bfe",
+        "index": 1,
+        "status": "away",
+        "age": 28,
+        "name": "Diaz Mccullough",
+        "gender": "male",
+        "group": "work",
+        "email": "diazmccullough@krog.com",
+        "phone": "+1 (936) 519-3015"
+      },
+      {
+        "_id": "59d986cddba5928a7dea0a6a",
+        "index": 2,
+        "status": "away",
+        "age": 28,
+        "name": "Rhonda Coleman",
+        "gender": "female",
+        "group": "family",
+        "email": "rhondacoleman@krog.com",
+        "phone": "+1 (980) 460-3539"
+      },
+      {
+        "_id": "59d986cd62b303890d97a15c",
+        "index": 3,
+        "status": "inactive",
+        "age": 30,
+        "name": "Odessa Clark",
+        "gender": "female",
+        "group": "family",
+        "email": "odessaclark@krog.com",
+        "phone": "+1 (997) 546-3048"
+      },
+      {
+        "_id": "59d986cd60ed74245a65deb4",
+        "index": 4,
+        "status": "busy",
+        "age": 28,
+        "name": "Mills Battle",
+        "gender": "male",
+        "group": "family",
+        "email": "millsbattle@krog.com",
+        "phone": "+1 (841) 436-2291"
+      },
+      {
+        "_id": "59d986cd5b397ceeea4e3cfd",
+        "index": 5,
+        "status": "busy",
+        "age": 26,
+        "name": "Elnora Watts",
+        "gender": "female",
+        "group": "family",
+        "email": "elnorawatts@krog.com",
+        "phone": "+1 (976) 408-2246"
+      },
+      {
+        "_id": "59d986cd7cc41463cd0fd960",
+        "index": 6,
+        "status": "inactive",
+        "age": 29,
+        "name": "Rosario Randolph",
+        "gender": "female",
+        "group": "friends",
+        "email": "rosariorandolph@krog.com",
+        "phone": "+1 (974) 530-3542"
+      }
+    ]
+}

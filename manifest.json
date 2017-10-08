@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Status Indicator",
+  "description": "This extension will track user activity to determine status",
+  "version": "1.0",
+  "background" : {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "idle",
+    "identity"
+  ],
+  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+}
