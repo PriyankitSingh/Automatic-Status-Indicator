@@ -2,12 +2,20 @@
  * Created by Jay on 10/4/2017.
  */
  // important properties
- var state = "available";
+ var state = "available"; // initial state
 
 chrome.idle.onStateChanged.addListener(function(newstate) {
     state = newstate;
     console.log(newstate);
     // history_log.unshift({'state':newstate, 'time':time})
+    // send message to index.js
+});
+
+// Sends message to the current tab
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+  chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
+    console.log(response.farewell);
+  });
 });
 
 chrome.browserAction.onClicked.addListener(function() {
@@ -52,8 +60,13 @@ chrome.browserAction.onClicked.addListener(function() {
 
 function addToDatabase(username, userstatus){
 	var allUsers = firebase.database().ref("users");
-	allUsers.push({
-	  	name: username,
-	  	status: userstatus
-  });
+	// allUsers.push({
+	//   	name: username,
+	//   	status: userstatus
+ //  });
+	allUsers.child(username).set({
+	    "name": username,
+	    "status": userstatus
+	});
 }
+
