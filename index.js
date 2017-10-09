@@ -21,8 +21,20 @@
 
   var allUsers = firebase.database().ref("users");
   console.log(allUsers);
-  allUsers.child("Jay").set({
-      "name": "Jay Pandya",
-      "status": "active",
-      "testField": "Testing"
+  // allUsers.set({
+  // 	name: "John Doe",
+  // 	status: "available"
+  // });
+
+  // Retrieve new posts as they are added to our database
+allUsers.on("child_added", function(snapshot, prevChildKey) {
+  var newPost = snapshot.val();
+  console.log("Name: " + newPost.name);
+  console.log("Status: " + newPost.status);
+});
+
+allUsers.push({
+  	name: "Jane Doe",
+  	status: "unavailable"
   });
+
