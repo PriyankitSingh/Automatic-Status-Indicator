@@ -38,3 +38,7 @@ allUsers.push({
   	status: "unavailable"
   });
 
+allUsers.child("Jay").set({
+    "name": "Jay Pandya",
+    "status": "active"
+})
