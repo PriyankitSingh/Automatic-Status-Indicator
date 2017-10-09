@@ -21,7 +21,8 @@
 
   var allUsers = firebase.database().ref("users");
   console.log(allUsers);
-  allUsers.set({
-  	name: "John Doe",
-  	status: "available"
+  allUsers.child("Jay").set({
+      "name": "Jay Pandya",
+      "status": "active",
+      "testField": "Testing"
   });
