@@ -12,7 +12,22 @@
   },
   "permissions": [
     "idle",
-    "identity"
+    "identity",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file://*"],
+      "js": [
+        "index.js"
+      ],
+      "web_accessible_resources": [
+        "index.html"
+      ]
+    }
   ],
   "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
 }
