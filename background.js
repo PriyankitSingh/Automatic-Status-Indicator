@@ -3,6 +3,7 @@
  */
  // important properties
  var state = "available"; // initial state
+ var userdata = [];
 
 chrome.idle.onStateChanged.addListener(function(newstate) {
     state = newstate;
@@ -42,7 +43,7 @@ chrome.browserAction.onClicked.addListener(function() {
     if (request.greeting == "hello"){
       sendResponse({farewell: "goodbye"});
     }
-    if(request.info == "database"){
+    if(request.info == "database"){ // probably don't need this
     	var userRef = firebase.database();
     	console.log(userRef);
     	sendResponse({data: userRef});
@@ -51,11 +52,18 @@ chrome.browserAction.onClicked.addListener(function() {
     	console.log(state);
     	sendResponse({data: state});
     }
-    if (request.add.length == 2){
-    	console.log(request.add[0] + " " + request.add[1]);
-    	addToDatabase(request.add[0], request.add[1]);
-    	sendResponse({status: "done"});
+    if (request.info == "userdata"){
+    	console.log(userdata);
+    	sendResponse({data: userdata});
     }
+    if(request.add != null){
+    	if (request.add.length == 2){
+	    	console.log(request.add[0] + " " + request.add[1]);
+	    	addToDatabase(request.add[0], request.add[1]);
+	    	sendResponse({status: "done"});
+	    }
+    }
+    
   });
 
 function addToDatabase(username, userstatus){
@@ -76,4 +84,5 @@ allUsers.on("child_added", function(snapshot, prevChildKey) {
   console.log("Status: " + newPost.status);
   console.log("Previous Post ID: " + prevChildKey);
   console.log(" ");
+  userdata.push([newPost.name, newPost.status]);
 });

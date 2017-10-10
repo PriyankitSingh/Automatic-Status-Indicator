@@ -3,16 +3,16 @@ chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
   console.log(response.farewell);
 });
 
-chrome.runtime.sendMessage({info: "database"}, function(response) {
-  console.log(response.data);
-});
-
 chrome.runtime.sendMessage({info: "state"}, function(response) {
   console.log(response.data);
 });
 
 chrome.runtime.sendMessage({add: ["Priyankit Singh", "available"]}, function(response) {
   console.log(response.status);
+});
+
+chrome.runtime.sendMessage({info: "userdata"}, function(response) {
+  console.log(response.data);
 });
 
 // // Initialize Firebase
