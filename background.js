@@ -32,7 +32,7 @@ chrome.browserAction.onClicked.addListener(function() {
     messagingSenderId: "1076122007504"
   };
   firebase.initializeApp(config);
-
+  var allUsers = firebase.database().ref("users");
 
   chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
@@ -59,7 +59,6 @@ chrome.browserAction.onClicked.addListener(function() {
   });
 
 function addToDatabase(username, userstatus){
-	var allUsers = firebase.database().ref("users");
 	// allUsers.push({
 	//   	name: username,
 	//   	status: userstatus
@@ -70,3 +69,11 @@ function addToDatabase(username, userstatus){
 	});
 }
 
+// Retrieve new posts as they are added to our database
+allUsers.on("child_added", function(snapshot, prevChildKey) {
+  var newPost = snapshot.val();
+  console.log("Name: " + newPost.name);
+  console.log("Status: " + newPost.status);
+  console.log("Previous Post ID: " + prevChildKey);
+  console.log(" ");
+});
