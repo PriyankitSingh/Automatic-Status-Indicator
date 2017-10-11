@@ -3,12 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Status Indicator</title>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script src="history.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
 
 </head>
 <body>
-<p>Indicator works.</p>
-<a href="chrome-extension://__MSG_@@extension_id__/index.html">Open Indicator</a>
+	<div class="container">
+	  <h2>Status Indicator</h2>
+	  <p>This is some text.</p> 
+	</div>
+
+	<div class="panel-group" id="accordion">
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+	        Homer Simpson</a>
+	      </h4>
+	    </div>
+	    <div id="collapse1" class="panel-collapse collapse in">
+	      <div class="panel-body">Available in facebook</div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+	        Marge Simpson</a>
+	      </h4>
+	    </div>
+	    <div id="collapse2" class="panel-collapse collapse">
+	      <div class="panel-body">Unavailable.</div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+	        Priyankit Singh</a>
+	      </h4>
+	    </div>
+	    <div id="collapse3" class="panel-collapse collapse">
+	      <div class="panel-body">Available on Twitter</div>
+	    </div>
+	  </div>
+	</div>
+
 </body>
 </html>

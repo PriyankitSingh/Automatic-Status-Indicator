@@ -9,6 +9,17 @@
 var laststate = null;
 var laststatetime = null;
 
+var data = [{
+      "name": "Homer Simpson",
+      "status": "available",
+      "group": "Work"
+    },{
+      "name": "Marge Simpson",
+      "status": "unavailable",
+      "group": "Work"
+    }
+    ];
+
 /**
  * Checks the current state of the browser.
  */

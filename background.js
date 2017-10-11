@@ -2,15 +2,30 @@
  * Created by Jay on 10/4/2017.
  */
  // important properties
- var state = "available"; // initial state
+ var state = "active"; // initial state
  var userdata = [];
+
+chrome.idle.setDetectionInterval(15);
+updateIcon();
 
 chrome.idle.onStateChanged.addListener(function(newstate) {
     state = newstate;
     console.log(newstate);
+    updateIcon();
     // history_log.unshift({'state':newstate, 'time':time})
     // send message to index.js
 });
+
+// change the icon based on availability
+function updateIcon(){
+	if (state == "active"){
+		chrome.browserAction.setIcon({path: 'icons/checked-symbol.png'});
+	} if (state == "idle"){
+		chrome.browserAction.setIcon({path: 'icons/unavailable-place.png'});
+	} if (state == "locked"){
+		chrome.browserAction.setIcon({path: 'icons/locked.png'});
+	}
+}
 
 // Sends message to the current tab
 chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
