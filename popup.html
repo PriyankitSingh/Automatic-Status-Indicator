@@ -5,58 +5,69 @@
     <title>Status Indicator</title>
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="popup.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
     <script src="history.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
 
 </head>
 <body>
-	<div class="container">
-	  <h2>Status Indicator</h2>
-	  <p>This is some text.</p> 
+<div class="container">
+	<div class="row" id="title">
+		<h5><strong>Contacts</strong></h5>
 	</div>
-
-	<div class="panel-group" id="accordion">
-	  <div class="panel panel-default">
-	    <div class="panel-heading">
-	      <h4 class="panel-title">
-	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-	        Homer Simpson</a>
-	      </h4>
-	    </div>
-	    <div id="collapse1" class="panel-collapse collapse in">
-	      <div class="panel-body">Available in facebook</div>
-	    </div>
-	  </div>
-	  <div class="panel panel-default">
-	    <div class="panel-heading">
-	      <h4 class="panel-title">
-	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-	        Marge Simpson</a>
-	      </h4>
-	    </div>
-	    <div id="collapse2" class="panel-collapse collapse">
-	      <div class="panel-body">Unavailable.</div>
-	    </div>
-	  </div>
-	  <div class="panel panel-default">
-	    <div class="panel-heading">
-	      <h4 class="panel-title">
-	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-	        Priyankit Singh</a>
-	      </h4>
-	    </div>
-	    <div id="collapse3" class="panel-collapse collapse">
-	      <div class="panel-body">Available on Twitter</div>
-	    </div>
-	  </div>
+</div>
+<div class="row">
+	<div class="col-sm-6">
+		<div class="container-fluid">
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+								Homer Simpson <i class="fa fa-circle" aria-hidden="true" style="float: right; color: green;"></i>
+							</a>
+						</strong>
+					</div>
+					<div id="collapse1" class="panel-collapse collapse in">
+						<div class="panel-body">Available on Facebook</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+								Marge Simpson<i class="fa fa-circle" aria-hidden="true" style="float: right; color: red;"></i></a>
+						</strong>
+					</div>
+					<div id="collapse2" class="panel-collapse collapse">
+						<div class="panel-body">Unavailable.</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+								Priyankit Singh <i class="fa fa-circle" aria-hidden="true" style="float: right; color: green;"></i></a>
+						</strong>
+					</div>
+					<div id="collapse3" class="panel-collapse collapse">
+						<div class="panel-body">Available on Twitter</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-
+</div>
 </body>
 </html>

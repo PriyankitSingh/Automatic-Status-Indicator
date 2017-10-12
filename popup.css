@@ -1,0 +1,12 @@
+/*.panel {*/
+    /*height: 10%;*/
+/*}*/
+
+body {
+    height: 100%;
+    width: 400px;
+}
+
+#title {
+    text-align: center;
+}
