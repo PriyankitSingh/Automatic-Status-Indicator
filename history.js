@@ -40,6 +40,12 @@ function checkState() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+    $('.availablility').bootstrapToggle({
+        on: 'Available',
+        off: 'Unavailable',
+        onstyle: 'success',
+        offstyle: 'danger'
+    });
     // Check every second (even though this is overkill - minimum idle
     // threshold is 15 seconds) so that the numbers appear to be counting up.
     checkState();
