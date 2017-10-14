@@ -1,0 +1,11 @@
+.online{
+	color: green;
+}
+
+.idle{
+	color: rgb(180, 175, 0);
+}
+
+.unavailable {
+	color: red;
+}
