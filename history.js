@@ -37,32 +37,11 @@ function checkState() {
     });
 };
 
-var twitter = true;
+var slack = true;
 var skype = true;
 var facebook = true;
 
-function evaluateStatus(){
-    console.log("called");
-    // if (facebook){
-    //     $('#overall').text('Overall status: ' + 'Available');
-    // } else if (twitter && skype){
-    //     $('#overall').text('Overall status: ' + 'Available');
-    // } else if (!facebook || !skype){
-    //     $('#overall').text('Overall status: ' + 'Unavailable');
-    // } else if (!twitter){
-    //     $('#overall').text('Overall status: ' + 'Available');
-    // } else if (facebook && twitter){
-    //     $('#overall').text('Overall status: ' + 'Available');
-    // } else if ( (skype || facebook) & !twitter ){
-    //     $('#overall').text('Overall status: ' + 'Available');
-    // }
-    // if (facebook){
-    //     $('#overall').text;
-    // } else {
-    //     $('#overall').html('Overall status: ' + 'Unavailable');
-    // }
 
-}
 
 document.addEventListener('DOMContentLoaded', function() {
     $('.availablility').bootstrapToggle({
@@ -92,19 +71,14 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     });
     $(function() {
-        $('#twitter').change(function() {
-            this.twitter = $(this).prop('checked');
+        $('#slack').change(function() {
+            this.slack = $(this).prop('checked');
+            // slack status doesn't matter
             if (this.skype == true || this.facebook == true){
                 $('#overall').text('Overall status: ' + 'Available');
             }
-
         })
     });
-    // $(function() {
-    //     $('.availablility').change(function() {
-    //         evaluateStatus();
-    //     })
-    // });
     // Check every second (even though this is overkill - minimum idle
     // threshold is 15 seconds) so that the numbers appear to be counting up.
     checkState();
