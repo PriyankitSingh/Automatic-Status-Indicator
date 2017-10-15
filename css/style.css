@@ -1,0 +1,21 @@
+.online{
+	color: green;
+}
+
+.idle{
+	color: rgb(180, 175, 0);
+}
+
+.unavailable {
+	color: red;
+}
+
+.modified{
+	border-radius: 5px !important;
+	border: 1px solid !important;
+	border-color: #CDCDCD !important;
+}
+
+span.notification {
+	color: #4D4D4D;
+}
