@@ -9,3 +9,13 @@
 .unavailable {
 	color: red;
 }
+
+.modified{
+	border-radius: 5px !important;
+	border: 1px solid !important;
+	border-color: #CDCDCD !important;
+}
+
+span.notification {
+	color: #FFFFFF;
+}
