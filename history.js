@@ -2,7 +2,6 @@
  * Created by Jay on 10/4/2017.
  */
 
-
 // Store previous state so we can show deltas.  This is important
 // because the API currently doesn't fire idle messages, and we'd
 // like to keep track of last time we went idle.
