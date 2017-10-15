@@ -37,7 +37,7 @@ function checkState() {
     });
 };
 
-var slack = true;
+var browser = true;
 var skype = true;
 var facebook = true;
 
@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     });
     $(function() {
-        $('#slack').change(function() {
-            this.slack = $(this).prop('checked');
+        $('#browser').change(function() {
+            this.browser = $(this).prop('checked');
             // slack status doesn't matter
             if (this.skype == true || this.facebook == true){
                 $('#overall').text('Overall status: ' + 'Available');
