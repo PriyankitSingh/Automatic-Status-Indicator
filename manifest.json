@@ -4,6 +4,7 @@
   "name": "Status Indicator",
   "description": "This extension will track user activity to determine status",
   "version": "1.0",
+  "options_page": "dashboard.html",
   "background" : {
     "page": "background.html"
   },
