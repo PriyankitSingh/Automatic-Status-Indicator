@@ -10,7 +10,9 @@ body {
 #title, #yourStatus {
     text-align: center;
 }
-
+.availablility {
+    float: right;
+}
 
 hr.styled {
     overflow: visible; /* For IE */
