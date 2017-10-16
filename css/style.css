@@ -34,3 +34,7 @@ span.notification {
 .groupButton {
 	float: right;
 }
+
+.groupHeading {
+	color: #4D4D4D;
+}
